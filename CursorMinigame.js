@@ -143,7 +143,7 @@ function stopClick()
 
 //This is the one doing all the hard work. Click, click, and click once more. And repeat.
 function autoClick(){
-  if((cursorMinigameState)&&Game.Has('Shimmering veil [on]')){
+  if((cursorMinigameState)&&!Game.Has('Shimmering veil [off]')){
 
     //What ? Golden cookie ? Click that one !! You unlock this feature at cursor level 2. Unless you're cheating.
     Game.shimmers.forEach(function(shimmer)
