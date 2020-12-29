@@ -125,6 +125,21 @@ function filthyCheater(tickSpeed,noImNot)
   }
 }
 
+function stopClick() 
+{
+  if (cursorMinigameState)
+  {
+    clearInterval(cursorMinigameCheck);
+    clearInterval(autoClickerCheck);
+    cursorMinigameState = false;
+  }
+  else
+  {
+    clearInterval(cursorMinigameCheck);
+    cursorMinigameCheck = setInterval(cursorMinigame, 30000);
+    cursorMinigame();
+  }
+}
 
 //This is the one doing all the hard work. Click, click, and click once more. And repeat.
 function autoClick(){
